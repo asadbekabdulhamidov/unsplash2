@@ -11,8 +11,11 @@ function ImageInfo() {
   } = useFetch(
     `https://api.unsplash.com/photos/${id}?client_id=${
       import.meta.env.VITE_ACCESS_KEY
+    }
     }`
   );
+
+  console.log(image);
 
   if (error) {
     return <div>Error: {error}</div>;

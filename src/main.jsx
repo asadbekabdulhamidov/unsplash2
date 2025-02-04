@@ -5,8 +5,12 @@ import App from "./App.jsx";
 //global context
 import { GlobalContextProvider } from "./context/GlobalContext.jsx";
 
+//toast
+import { ToastContainer } from "react-toastify";
+
 createRoot(document.getElementById("root")).render(
   <GlobalContextProvider>
     <App />
-  </GlobalContextProvider>
+    <ToastContainer position="bottom-right" />
+  </GlobalContextProvider>,
 );

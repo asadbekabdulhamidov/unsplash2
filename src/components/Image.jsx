@@ -29,7 +29,7 @@ function Image({ image, added }) {
   };
 
   return (
-    <Link to={`/imageinfo/  ${image.id}`}>
+    <Link to={`/imageinfo/${image.id}`}>
       <div className="group relative">
         {!added && (
           <span

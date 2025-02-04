@@ -1,18 +1,25 @@
 // react icons
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaUser, FaKey } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 function Forminput({ type, placeholder, name }) {
   return (
-    <label className="input w-full input-bordered flex items-center gap-2 input-sm md:btn-md">
+    <label className="input input-sm input-bordered flex w-full items-center gap-2 md:btn-md">
       <input
         required
         type={type}
-        className="grow "
+        className="grow"
         placeholder={placeholder}
         name={name}
       />
 
-      <FaSearch className="h-4 w-4 opacity-70" />
+      {placeholder == "Search" && <FaSearch className="h-4 w-4 opacity-70" />}
+      {placeholder == "Full Name" && <FaUser className="h-4 w-4 opacity-70" />}
+      {placeholder == "Password" && <FaKey className="h-4 w-4 opacity-70" />}
+      {placeholder == "Confirm Password" && (
+        <FaKey className="h-4 w-4 opacity-70" />
+      )}
+      {placeholder == "Email" && <MdEmail className="h-4 w-4 opacity-70" />}
     </label>
   );
 }
